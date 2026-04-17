@@ -1,0 +1,79 @@
+$ tfp
+
+Terraform used the selected providers to generate the
+following execution plan. Resource actions are indicated
+with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # google_compute_disk.grafana_disk will be created
+  + resource "google_compute_disk" "grafana_disk" {
+      + access_mode                 = (known after apply)
+      + creation_timestamp          = (known after apply)
+      + disk_id                     = (known after apply)
+      + effective_labels            = (known after apply)
+      + enable_confidential_compute = (known after apply)
+      + id                          = (known after apply)
+      + label_fingerprint           = (known after apply)
+      + last_attach_timestamp       = (known after apply)
+      + last_detach_timestamp       = (known after apply)
+      + licenses                    = (known after apply)
+      + name                        = "grafana-disk"
+      + physical_block_size_bytes   = (known after apply)
+      + project                     = "class75lt"
+      + provisioned_iops            = (known after apply)
+      + provisioned_throughput      = (known after apply)
+      + self_link                   = (known after apply)
+      + size                        = 10
+      + source_disk_id              = (known after apply)
+      + source_image_id             = (known after apply)
+      + source_snapshot_id          = (known after apply)
+      + terraform_labels            = (known after apply)
+      + type                        = "pd-standard"
+      + users                       = (known after apply)
+      + zone                        = "us-central1-a"
+
+      + guest_os_features (known after apply)
+    }
+
+  # google_compute_network.main will be created
+  + resource "google_compute_network" "main" {
+      + auto_create_subnetworks                   = false
+      + delete_default_routes_on_create           = false
+      + gateway_ipv4                              = (known after apply)
+      + id                                        = (known after apply)
+      + internal_ipv6_range                       = (known after apply)
+      + mtu                                       = 1460
+      + name                                      = "main"
+      + network_firewall_policy_enforcement_order = "AFTER_CLASSIC_FIREWALL"
+      + numeric_id                                = (known after apply)
+      + project                                   = "class75lt"
+      + routing_mode                              = "REGIONAL"
+      + self_link                                 = (known after apply)
+    }
+
+  # google_project_service.compute will be created
+  + resource "google_project_service" "compute" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "class75lt"
+      + service            = "compute.googleapis.com"
+    }
+
+  # google_project_service.container will be created
+  + resource "google_project_service" "container" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "class75lt"
+      + service            = "container.googleapis.com"
+    }
+
+Plan: 4 to add, 0 to change, 0 to destroy.
+
+──────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so
+Terraform can't guarantee to take exactly these actions if
+you run "terraform apply" now.
+
