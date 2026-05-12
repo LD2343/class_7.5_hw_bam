@@ -54,3 +54,7 @@
 - Routing Rules
   - Mode = Simple Host and Path Rule
 - Click Create
+
+### Teardown Order
+1. Loadbalancer w/ backend
+2. MIGs
