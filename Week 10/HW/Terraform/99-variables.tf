@@ -18,3 +18,8 @@ variable "student_name" {
   type    = string
   default = "logan_terrel"
 }
+
+variable "project_team" {
+  type    = string
+  default = "bos"
+}
